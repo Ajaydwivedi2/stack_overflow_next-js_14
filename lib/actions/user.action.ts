@@ -1,14 +1,10 @@
 "use server";
 import User from "@/database/user.model";
 import { connectedToDatabase } from "../mongoose";
-import {
-  CreateUserParams,
-  DeleteUserParams,
-  GetUserByIdParams,
-  UpdateUserParams,
-} from "./shared.types";
 import { revalidatePath } from "next/cache";
 import Question from "@/database/question.model";
+// prettier-ignore
+import { CreateUserParams, DeleteUserParams, GetUserByIdParams, UpdateUserParams, } from "./shared.types";
 
 export async function getUserById(params: GetUserByIdParams) {
   try {

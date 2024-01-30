@@ -4,14 +4,15 @@ import Question from "@/database/question.model";
 import Tag from "@/database/tag.model";
 import { CreateQuestionParams, GetQuestionsParams } from "./shared.types";
 import { revalidatePath } from "next/cache";
+import User from "@/database/user.model";
 
 export async function getQuestions(params: GetQuestionsParams) {
   try {
     connectedToDatabase();
 
     const questions = await Question.find({})
-      .populate({ path: "tags", model: "Tag" })
-      .populate({ path: "author", model: "User" })
+      .populate({ path: "tags", model: Tag })
+      .populate({ path: "author", model: User })
       .sort({ createdAt: -1 });
 
     return { questions };

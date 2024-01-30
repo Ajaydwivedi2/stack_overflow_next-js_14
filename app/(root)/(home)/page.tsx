@@ -55,7 +55,7 @@ export default async function Home() {
         ) : (
           <NoResult
             title="There's no question to show"
-            description="ljshdfblsdbLSIDFBSLDhblsdjhfbskdjfhssdkbjfsdfhsdlfblsdjhfbasdjfrf asdkbcsdj"
+            description="This line indicates that there are currently no questions available for display. It suggests an absence of content in the context where questions are expected.🎉🏡"
             link="/ask-question"
             linkTitle="Ask a Question"
           />

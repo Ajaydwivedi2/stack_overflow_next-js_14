@@ -57,7 +57,7 @@ function Question({ mongoUserId }: Props) {
         path: pathname,
       });
 
-      // navigate to home page
+      // navigate to home page with push method
       router.push("/");
     } catch (error) {
       console.log(error);

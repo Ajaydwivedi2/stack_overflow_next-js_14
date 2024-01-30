@@ -10,7 +10,6 @@ async function Page() {
 
   if (!userId) redirect("/sign-in");
   const mongoUser = await getUserById({ userId });
-  console.log(mongoUser);
 
   return (
     <div>

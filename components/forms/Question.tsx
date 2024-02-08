@@ -22,7 +22,7 @@ import { createQuestion, editQuestion } from "@/lib/actions/question.action";
 import { usePathname, useRouter } from "next/navigation";
 
 interface Props {
-  type: string;
+  type?: string;
   questionDetails?: string;
   mongoUserId: string;
 }

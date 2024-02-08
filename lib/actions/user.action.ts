@@ -10,9 +10,6 @@ import Question from "@/database/question.model";
 import { FilterQuery } from "mongoose";
 import Tag from "@/database/tag.model";
 import { Answer } from "@/database/answer.model";
-import error from "next/error";
-import path from "path";
-import console from "console";
 
 export async function getUserById(params: GetUserByIdParams) {
   try {
@@ -78,8 +75,6 @@ export async function deleteUser(params: DeleteUserParams) {
 
     // delete user questions
     await Question.deleteMany({ author: user._id });
-
-    // TODO delete user answers, comments, etc
 
     const deletedUser = await User.findByIdAndDelete(user._id);
 

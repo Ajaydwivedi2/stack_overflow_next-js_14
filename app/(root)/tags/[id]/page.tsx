@@ -5,8 +5,9 @@ import Pagination from "@/components/shared/Pagination";
 import LocalSearch from "@/components/shared/search/LocalSearch";
 import { HomePageFilters } from "@/constants/filters";
 import { getQuestionsByTagId } from "@/lib/actions/tag.action";
+import { URLProps } from "@/types";
 
-export default async function Tag({ params, searchParams }) {
+export default async function Tag({ params, searchParams }: URLProps) {
   const {
     tagTitle,
     questions: results,
@@ -16,8 +17,6 @@ export default async function Tag({ params, searchParams }) {
     searchQuery: searchParams.q,
     page: searchParams.page ? +searchParams.page : 1,
   });
-
-  console.log(tagTitle, results);
 
   return (
     <>
@@ -40,7 +39,7 @@ export default async function Tag({ params, searchParams }) {
 
       <div className="mt-10 flex w-full flex-col gap-6">
         {results.length > 0 ? (
-          results.map((question) => (
+          results.map((question: any) => (
             <QuestionCard
               key={question._id}
               _id={question._id}

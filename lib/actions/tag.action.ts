@@ -79,6 +79,7 @@ export async function getAllTags(params: GetAllTagsParams) {
     return { tags, isNext };
   } catch (error) {
     console.log(error);
+    throw error;
   }
 }
 

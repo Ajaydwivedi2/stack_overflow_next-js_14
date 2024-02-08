@@ -10,8 +10,9 @@ import ProfileLink from "@/components/shared/ProfileLink";
 import Stats from "@/components/shared/Stats";
 import QuestionTab from "@/components/shared/QuestionTab";
 import AnswerTab from "@/components/shared/AnswerTab";
+import { URLProps } from "@/types";
 
-async function Profile({ params, searchParams }) {
+async function Profile({ params, searchParams }: URLProps) {
   const userInfo = await getUserInfo({ userId: params.id });
   const { userId: clerkId } = auth();
 

@@ -17,7 +17,7 @@ function NavContent() {
   const pathname = usePathname();
 
   return (
-    <section className="flex h-full flex-col gap-6 pt-16">
+    <section className=" flex h-full flex-col gap-6  pt-16">
       {sidebarLinks.map((item) => {
         const isActive =
           (pathname.includes(item.route) && item.route.length > 1) ||
@@ -56,12 +56,12 @@ function MobileNav() {
           width={36}
           height={36}
           alt="Menu"
-          className="invert-colors sm:hidden"
+          className="invert-colors cursor-pointer sm:hidden"
         />
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="background-light900_dark200 border-none"
+        className="background-light900_dark200  custom-scrollbar overflow-y-scroll border-none"
       >
         <Link href="/" className="flex items-center gap-1">
           <Image

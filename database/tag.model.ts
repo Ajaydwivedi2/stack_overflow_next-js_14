@@ -5,14 +5,14 @@ export interface ITag {
   description: string;
   questions: Schema.Types.ObjectId[];
   followers: Schema.Types.ObjectId[];
-  createdOn: Date;
+  createdAt: Date;
 }
 
 const TagSchema = new Schema({
   name: { type: String, required: true, unique: true },
   description: { type: String, required: true },
   questions: [{ type: Schema.Types.ObjectId, ref: "Question" }],
-  createdOn: { type: Date, default: Date.now },
+  createdAt: { type: Date, default: Date.now },
 });
 
 const Tag = models.Tag || model("Tag", TagSchema);

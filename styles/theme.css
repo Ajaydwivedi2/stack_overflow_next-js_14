@@ -9,6 +9,9 @@
   .background-light900_dark200 {
     @apply bg-light-900 dark:bg-dark-200;
   }
+  .bg-muted {
+    @apply bg-zinc-200 dark:bg-zinc-900;
+  }
   .background-light900_dark300 {
     @apply bg-light-900 dark:bg-dark-300;
   }

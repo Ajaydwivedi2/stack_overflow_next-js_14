@@ -39,7 +39,8 @@ const LeftSidebar = () => {
             >
               <Image
                 src={item.imgURL}
-                alt={item.label}
+                // alt={item.label}
+                alt="img"
                 width={20}
                 height={20}
                 className={`${isActive ? "" : "invert-colors"}`}

@@ -36,6 +36,7 @@ module.exports = {
           500: "#7B8EC8",
           400: "#858EAD",
         },
+
         "accent-blue": "#1DA1F2",
       },
       fontFamily: {
